@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.city {
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+
+.city img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.light {
+    position: absolute;
+    z-index: 1;
+    top: 25.5%;
+    left: 36.5%;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    transform: rotateZ(124deg);
+    animation: call 1s linear 1 forwards;
+}
+
+.light-disabled {
+    display: none;
+}
+
+@keyframes call {
+    0% {
+        border-bottom: 250px inset transparent;
+        filter: none;
+    }
+    50% {
+        border-bottom: 250px inset transparent;
+    }
+    100% {
+        border-bottom: 250px inset rgba(54, 44, 44, 0.151);
+        filter: drop-shadow( 0px 0px 2px #7F7800);
+    }
+}
+
+.logo {
+    z-index: 1;
+    position: absolute;
+    width: 82px;
+    top: 29.9%;
+    left: 29.9%;
+    transform: rotateZ(124deg);
+    border-radius: 50%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+}
+
+.shadowOff {
+    z-index: 100;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 30.7%;
+    left: 32.6%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 26px 20px 70px#0A1A19;
+}
+
+.shadow {
+    z-index: 100;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 30.7%;
+    left: 32.6%;
+    border-radius: 50%;
+    background: transparent;
+    animation: logoLight 5s linear 1 forwards;
+    animation-delay: 1s;
+    box-shadow: 0px 26px 20px 70px#0A1A19;
+}
+
+@keyframes logoLight {
+    from {
+        background: transparent;
+        box-shadow: 0px 30px 30px 70px#0A1A19;
+    }
+    to {
+        background: #423e28ea;
+        box-shadow: 0px 20px 30px 50px#746f0980;
+    }
+}
+
+.bat1, .bat2, .bat3, .bat4, .bat5 {
+    z-index: 10;
+    position: absolute;
+    transform: rotateZ(45deg);
+}
+.bat1 {
+    width: 100px;
+    height: 100px;
+
+    animation: batAll 3s linear 2 ;
+}
+
+.bat2 {
+    width: 150px;
+    height: 150px;
+
+    animation: batAll 4.3s linear ;
+    animation-delay: .6s;
+
+
+}
+.bat3 {
+    width: 130px;
+    height: 130px;
+
+    animation: batAll 3.5s linear 3;
+    animation-delay: .9s;
+}
+.bat4 {
+    width: 90px;
+    height: 90px;
+
+    animation: batAll 2s linear ;
+    animation-delay: .3s;
+}
+.bat5 {
+    width: 180px;
+    height: 180px;
+
+    animation: batAll 2.6s linear ;
+    animation-delay: .5s;
+}
+.bat6 {
+    width: 50px;
+    height: 50px;
+
+    animation: batAll 2.6s linear ;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes batAll {
+    0% {
+        bottom: -550px;
+        right: 500px;
+    }
+    50% {
+        bottom: 50%;
+        right: -100pxpx;
+    }
+    75% {
+        bottom: 75%;
+        right: -300px;
+    }
+    100% {
+        bottom: 100%;
+        right: -400px;
+    }
+}
+
+.characterOff {
+    z-index: 100;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 60px;
+}
+
+.character {
+    z-index: 100;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 60px;
+    animation: charBottom 5s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes charBottom {
+    0% {
+        bottom: -550px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.text-Woman-All {
+    animation: allChar 1.5s ease forwards;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+}
+
+@keyframes allChar {
+    from {
+        bottom: -550px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.text-Woman-All-j {
+    animation: allCharJ 4s ease forwards;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+}
+
+@keyframes allCharJ {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -550px;
+    }
+}
+
+.woman {
+    z-index: 100;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+}
+
+.speech {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 25%;
+    left: 100px;
+    transform: rotateZ(14deg)
+}
+
+.text-speech {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    bottom: 25%;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-speech p {
+    padding-top: 1.7rem;
+    padding-left: 1.2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.links {
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 3px;
+    margin-left: 5px;
+    background: orange;
+    border-radius: 5px;
+    color: black;
+    transition: background .4s;
+}
+
+.links a:hover {
+    background: rgb(139, 94, 10);
+}
+
+.cityDestroyed {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: fade 4s linear 1 forwards;
+}
+
+@keyframes fade {
+    from {
+        background: transparent;
+    }
+    to {
+        background: black;
+    }
+}
+
+@keyframes cloudAll {
+    0% {
+        transform: translateZ(0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/*.cloud {
+    background-color: rgba(0,0,0, .4);
+    position: ;
+    bottom: 11px;
+    width: 250.625em;
+    height: 43.75em;
+    animation: cloudAll 80s linear infinite;
+    z-index: 1000;
+    
+}
+
+*/
+
+.joker {
+    z-index: 100;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 35%;
+    animation: jokerRight 2s linear 1 forwards;
+    animation-delay: 3s;
+}
+
+@keyframes jokerRight {
+    from {
+        bottom: -550px;
+    }
+    to {
+        bottom: 0;
+    }
+}
